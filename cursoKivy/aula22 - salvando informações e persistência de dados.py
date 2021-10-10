@@ -82,7 +82,7 @@ class Tarefas(Screen):
     path = ''
 
     def on_pre_enter(self):
-        self.path = App.get_running_app().user_tada_dir+'/'
+        self.path = App.get_running_app().user_data_dir+'/'
         self.loadData()
         Window.bind(on_keyboard=self.voltar)
         for tarefa in self.tarefas:
@@ -106,7 +106,7 @@ class Tarefas(Screen):
 
     def saveData(self,*args):
         with open(self.path+'data.json','w') as data:
-            json.dump(self.tarefas.data)
+            json.dump(self.tarefas,data)
 
     def removeWidget(self,tarefa):
         texto = tarefa.ids.label.text

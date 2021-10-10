@@ -1,0 +1,9 @@
+--------LOCAL DOS ARQUIVOS------------------------
+C:\Users\kiran\AppData\Roaming
+C:\Users\kiran\AppData\Roaming\test25>
+
+--------COMANDO PARA DELETAR----------------------
+del data.json
+
+--------COMANDO PARA LOCALIZAR DIRETORIO----------------------
+dir "\test22" /s
