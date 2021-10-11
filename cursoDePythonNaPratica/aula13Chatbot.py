@@ -2,7 +2,13 @@ import json
 
 class Chatbot():
     def __init__(self, nome): #primeira função a rodar
-        memoria = open(nome+'.json','r')
+        try:
+            memoria = open(nome+'.json','r')
+        except FileNotFoundError:
+            memoria = open(nome+'.json','w')
+            memoria.write('["Will","Alfredo"]')
+            memoria.close()
+            memoria = open(nome+'.json','r')
         self.nome = nome
         self.conhecidos = json.load(memoria)
         memoria.close()
