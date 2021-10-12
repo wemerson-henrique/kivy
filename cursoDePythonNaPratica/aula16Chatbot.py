@@ -1,4 +1,7 @@
 import json
+import os
+import sys
+import subprocess as s
 
 class Chatbot():
     def __init__(self, nome): #primeira função a rodar
@@ -35,7 +38,7 @@ class Chatbot():
             resp = self.respondeNome(nome)
             return resp
         try:
-            resp = eval(frase)
+            resp = str(eval(frase))
             return resp
         except:
             pass
@@ -60,6 +63,18 @@ class Chatbot():
         return frase + nome
 
     def fala(self, frase):
-        print(frase)
+        if "executa " in frase:
+            plataforma = sys.platform
+            comando = frase.replace("executa ","")
+            if "win" in plataforma:
+                os.startfile(comando)
+                print(frase)
+            if "linux" in plataforma:
+                try:
+                    s.Popen(comando)
+                except FileNotFoundError:
+                    s.Popen(['xdg-open',comando])
+        else:
+            print(frase)
         self.historico.append(frase)
 
