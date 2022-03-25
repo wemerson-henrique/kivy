@@ -1,0 +1,20 @@
+#:kivy 1.1
+<Home>:
+    orientation:'vertical'
+    Label:
+        id:label1
+        text:'hello world'
+    BoxLayout:
+        orientation:'horizontal'
+        TextInput:
+            id:input1
+            size_hint_y: None
+            hieght:20
+            size_hint_x:None
+            width: 600 #self.width * 0.8
+        Button:
+            id:btnPost
+            size_hint_y: None
+            hieght:20
+            text:'Postar'
+            on_release:root.PostMensage(input1.text)

@@ -1,0 +1,33 @@
+#:kivy 1.1
+
+<Screen>:
+    Label:
+        size_hint_y: None
+        pos: 0,100
+        id:l_m
+        text: 'Digite algo:'
+    TextInput:
+        id:texto
+        size_hint_x:None
+        size_hint_y:None
+        # multiline: False
+        height:25
+        widht: 400
+        pos: 100,135
+    Button:
+        pos: 200,130
+        size_hint_x:None
+        width:100
+        text:'Clicar'
+        height:40
+        on_press: root.bonclick()
+    Label:
+        id:L2
+        size_hint_y: None
+        pos: 0,0
+        text: ''
+    Label:
+        id:L3
+        size_hint_y: None
+        pos: 100,0
+        text: ''

@@ -1,0 +1,5 @@
+python -m venv kivy_venv
+kivy_venv\Scripts\activate.bat
+python -m pip install "kivy[full]" kivy_examples
+python -m pip install --upgrade pip
+python kivy_venv\share\kivy-examples\demo\showcase\main.py

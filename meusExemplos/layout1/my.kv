@@ -1,0 +1,24 @@
+#:kivy 1.1
+
+<Home>:
+    background_color: 0, 1, 0, .5
+    BoxLayout:
+        orientation: 'vertical'
+        canvas:
+            Color:
+                rgba: 0, .0, 1., 1.
+            Ellipse:
+                pos: root.x, 0
+                size: 50,50
+            Ellipse:
+                pos: root.x + 300, 0
+                size: 50,50
+            Rectangle:
+                pos: root.x + 25, 0
+                size: 300, 50
+    RelativeLayout:
+        size_hint: None, None
+        pos: 0,0
+        Label:
+            id: botao
+            text: 'Cadastrar'

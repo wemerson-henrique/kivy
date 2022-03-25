@@ -1,0 +1,17 @@
+#:kivy 1.1
+<Screen1>:
+    BoxLayout:
+        orientation:'vertical'
+        BoxLayout:
+            orientation:'horizontal'
+            Label:
+                id:L1
+                text:'label 1'
+        BoxLayout:
+            orientation:'horizontal'
+            TextInput:
+                id:I1
+                text:'my input'
+            Button:
+                text:'Clicar'
+                on_release:root.F_Escrever()
