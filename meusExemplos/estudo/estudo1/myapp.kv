@@ -1,4 +1,14 @@
 #:kivy 1.1
-
-<Home>:
-    text:'ola'
+<Screen1>:
+    BoxLayout:
+        orientation:'vertical'
+        Label:
+            id:l1
+            text:'texto...'
+            BoxLayout:
+                orientation:'horizontal'
+                TextInput:
+                    id:input1
+                Button:
+                    text:'clicar'
+                    on_release:root.onclick()
