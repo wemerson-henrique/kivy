@@ -1,0 +1,23 @@
+#:kivy 1.1
+
+
+<MyWidget1>:
+    canvas:
+        Color:
+            rgba: 1, .3, .8, .5
+        Line:
+            points: 0,0,500,500
+
+<MyWidget>:
+    label_widget: label_widget.__self__
+    BoxLayout:
+        orientation:'vertical'
+        Button:
+            text: 'Add Button'
+            on_press: root.add_widget(label_widget)
+        Button:
+            text: 'Remove Button'
+            on_press: root.remove_widget(label_widget)
+    Label:
+        id: label_widget
+        text: 'widget'

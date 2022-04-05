@@ -1,0 +1,19 @@
+#:kivy 1.1
+
+<MyFirstWidget>:
+    txt_inpt: txt_inpt
+    orientation:'vertical'
+    Button:
+        id: f_but
+        text:'Click em mim'
+    TextInput:
+        id: txt_inpt
+        text: f_but.state
+        on_text: root.check_status(f_but)
+    Label:
+        id: loki
+        text: 'loki: I AM YOUR GOD!'
+    Button:
+        id: hulk
+        text: "press to smash loki"
+        on_release: root.hulk_smash()
