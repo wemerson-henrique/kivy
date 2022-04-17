@@ -1,0 +1,48 @@
+#:kivy 1.1
+
+<MeuQuadrado>:
+    canvas:
+        Color:
+            rgb: 1,1,0
+        Rectangle:
+            pos: self.pos
+            size: 50,50
+
+<Home>:
+    quad: quadrado
+    MeuQuadrado:
+        id: quadrado
+        center: self.parent.center
+
+    BoxLayout:
+        orientation:'horizontal'
+        Button:
+            text:"Ani01"
+            size_hint:None,None
+            pos:0,0
+            on_press:root.AnimacaoSimples(quadrado)
+        Button:
+            text:"Ani02"
+            size_hint:None,None
+            pos:0,0
+            on_press:root.MultiplasPropriedadesETransicoes(quadrado)
+        Button:
+            text:"Ani03"
+            size_hint:None,None
+            pos:0,0
+            on_press:root.AnimacaoSequencial(quadrado)
+        Button:
+            text:"Ani04"
+            size_hint:None,None
+            pos:0,0
+            on_press:root.AnimacaoParalela(quadrado)
+        Button:
+            text:"Ani05"
+            size_hint:None,None
+            pos:0,0
+            on_press:root.RepetindoAnimacao(quadrado)
+        Button:
+            text:"Cancelar animações"
+            size_hint:None,None
+            pos:0,0
+            on_press:root.cancelarAnimacao(quadrado)
