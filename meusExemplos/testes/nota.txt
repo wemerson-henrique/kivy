@@ -1,2 +1,0 @@
-ython -m unittest test_teste1.py -> executa arquivo de teste
-

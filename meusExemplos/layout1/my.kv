@@ -4,7 +4,16 @@
     background_color: 0, 1, 0, .5
     BoxLayout:
         orientation: 'vertical'
-        canvas:
+        
+    RelativeLayout:
+        size_hint: None, None
+        pos: 0,0
+        Label:
+            id: botao
+            text: 'Cadastrar'
+
+<botao@ButtonBehavior+Label>:
+    canvas:
             Color:
                 rgba: 0, .0, 1., 1.
             Ellipse:
@@ -16,9 +25,16 @@
             Rectangle:
                 pos: root.x + 25, 0
                 size: 300, 50
-    RelativeLayout:
-        size_hint: None, None
-        pos: 0,0
-        Label:
-            id: botao
-            text: 'Cadastrar'
+
+<Button1@ButtonBehavior+Label>:
+    canvas:
+        Clear
+        Color:
+            rgb: (1, 0, 0)
+        Rectangle:
+            pos: self.pos
+            size: self.size
+        Rectangle:
+            pos: self.pos
+            size: self.texture_size
+            texture: self.texture
